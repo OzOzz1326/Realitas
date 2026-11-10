@@ -1,0 +1,284 @@
+#pagina-campanhas {
+  width: min(1120px, calc(100% - 48px));
+  min-height: 650px;
+  margin: 0 auto;
+  padding: 58px 0 82px;
+}
+
+#pagina-campanhas .page-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 29px;
+}
+
+#pagina-campanhas .eyebrow {
+  color: #b7afa5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+#pagina-campanhas .page-heading h1 {
+  margin: 11px 0 6px;
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5vw, 53px);
+  font-weight: 500;
+  letter-spacing: -0.07em;
+}
+
+#pagina-campanhas .page-heading p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+#pagina-campanhas .button-primary {
+  min-height: 42px;
+  padding: 0 15px;
+  border: 0;
+  background: var(--color-accent);
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#pagina-campanhas .button-primary:hover {
+  background: var(--color-accent-light);
+}
+
+#pagina-campanhas .campaign-filters {
+  display: flex;
+  min-height: 47px;
+  align-items: center;
+  gap: 24px;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+#pagina-campanhas .campaign-filters button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+  font-size: 11px;
+}
+
+#pagina-campanhas .campaign-filters button:hover,
+#pagina-campanhas .campaign-filters .filter-active {
+  color: var(--color-text);
+}
+
+#pagina-campanhas .filter-active span {
+  display: grid;
+  width: 17px;
+  height: 17px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(214, 107, 80, 0.2);
+  color: #e3a18d;
+  font-size: 9px;
+}
+
+#pagina-campanhas .campaigns-count {
+  margin-left: auto;
+  color: #79756f;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+#pagina-campanhas .campaign-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding-top: 23px;
+}
+
+#pagina-campanhas .operation-card {
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  background: var(--color-panel);
+}
+
+#pagina-campanhas .operation-art {
+  position: relative;
+  display: grid;
+  height: 158px;
+  overflow: hidden;
+  place-items: center;
+  background:
+    radial-gradient(circle at center, var(--operation-light), transparent 54%),
+    repeating-radial-gradient(circle at 50% 52%, transparent 0 21px, rgba(238, 233, 226, 0.055) 22px 23px, transparent 24px 39px),
+    linear-gradient(135deg, var(--operation-base), #191918);
+}
+
+#pagina-campanhas .operation-art::before,
+#pagina-campanhas .operation-art::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 130%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--operation-line), transparent);
+  content: '';
+}
+
+#pagina-campanhas .operation-art::before {
+  transform: translate(-50%, -50%) rotate(34deg);
+}
+
+#pagina-campanhas .operation-art::after {
+  transform: translate(-50%, -50%) rotate(-34deg);
+}
+
+#pagina-campanhas .campaign-rust {
+  --operation-base: #2a1b18;
+  --operation-light: rgba(173, 79, 56, 0.25);
+  --operation-line: rgba(222, 121, 94, 0.28);
+  --operation-color: #e08b72;
+}
+
+#pagina-campanhas .campaign-ash {
+  --operation-base: #1b2428;
+  --operation-light: rgba(83, 121, 136, 0.25);
+  --operation-line: rgba(142, 185, 197, 0.23);
+  --operation-color: #9cc0c9;
+}
+
+#pagina-campanhas .campaign-ochre {
+  --operation-base: #292419;
+  --operation-light: rgba(162, 124, 54, 0.22);
+  --operation-line: rgba(213, 179, 105, 0.25);
+  --operation-color: #d8b86f;
+}
+
+#pagina-campanhas .operation-symbol {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 62px;
+  height: 62px;
+  place-items: center;
+  border: 1px solid var(--operation-line);
+  border-radius: 50%;
+  color: var(--operation-color);
+  font-size: 31px;
+  text-shadow: 0 0 24px var(--operation-color);
+}
+
+#pagina-campanhas .operation-index {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  color: rgba(238, 233, 226, 0.57);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+}
+
+#pagina-campanhas .operation-content {
+  padding: 16px;
+}
+
+#pagina-campanhas .operation-meta,
+#pagina-campanhas .operation-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+}
+
+#pagina-campanhas .operation-meta {
+  color: var(--color-muted);
+  font-size: 9px;
+}
+
+#pagina-campanhas .operation-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--operation-color);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+#pagina-campanhas .operation-status i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--operation-color);
+}
+
+#pagina-campanhas .operation-content h2 {
+  margin: 17px 0 8px;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+#pagina-campanhas .operation-content > p {
+  min-height: 51px;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+#pagina-campanhas .operation-footer {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-line);
+  color: #a09a91;
+  font-size: 9px;
+}
+
+#pagina-campanhas .operation-footer button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #d8a08d;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+#pagina-campanhas .operation-footer button b {
+  margin-left: 5px;
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  #pagina-campanhas .campaign-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  #pagina-campanhas {
+    width: calc(100% - 32px);
+    padding-top: 38px;
+  }
+
+  #pagina-campanhas .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  #pagina-campanhas .campaign-filters {
+    gap: 15px;
+  }
+
+  #pagina-campanhas .campaigns-count {
+    display: none;
+  }
+
+  #pagina-campanhas .campaign-cards {
+    grid-template-columns: 1fr;
+  }
+}
